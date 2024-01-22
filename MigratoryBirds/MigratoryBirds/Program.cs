@@ -20,12 +20,7 @@ namespace MigratoryBirds
     private static int migratoryBirds(List<int> arr)
     {
       var list = arr.GroupBy(x => x).ToDictionary(p => p.Key, q => q.Count()).OrderByDescending(r=>r.Value).ThenBy(x=>x.Key);
-
       return list.FirstOrDefault().Key;
-      //  new();
-      //foreach (int item in arr) { 
-      //  list.Add(item);
-      //}
     }
   }
 }
